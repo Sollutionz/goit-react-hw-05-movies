@@ -13,7 +13,7 @@ export default function Reviews (){
         const data = await fetchMovieReview(movieId);
         setReviews(data);
       } catch (error) {
-        // alert(`Oops, some error occurred... Message: ${error.message}`);
+        alert(`Oops, some error occurred... Message: ${error.message}`);
       }
     };
     getMovieReview();

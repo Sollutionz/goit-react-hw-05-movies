@@ -13,7 +13,7 @@ export default function Cast() {
         const data = await fetchMovieCast(movieId);
         setCast(data);
       } catch (error) {
-        // alert(`Oops, some error occurred... Message: ${error.message}`);
+        alert(`Oops, some error occurred... Message: ${error.message}`);
       }
     };
     getMovieCast();
