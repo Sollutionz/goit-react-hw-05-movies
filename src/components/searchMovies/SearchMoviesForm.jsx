@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import css from './SeacrchMovies.module.css'
+
 
 export default function SearchMoviesForm() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,8 +21,8 @@ export default function SearchMoviesForm() {
   }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className={css.container}>
+      <form onSubmit={onSubmit} className={css.form}>
         <input
           type="text"
           autoComplete="off"
@@ -29,8 +31,9 @@ export default function SearchMoviesForm() {
           value={searchQuery}
           onChange={onChange}
           name="query"
+          className={css.input}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className={css.button}>Search</button>
       </form>
     </div>
   );

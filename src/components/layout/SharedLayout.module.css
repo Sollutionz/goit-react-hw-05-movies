@@ -1,0 +1,57 @@
+.label {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  font-weight: 600;
+  font-style: unset;
+  transition: all .2s ease-in-out;
+}
+.label:hover{
+     transform: scale(1.01); 
+}
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.link {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: orange;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.link:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.header {
+  top: 0px;
+  left: 0px;
+  position: sticky;
+  z-index: 1000;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  max-width: 1600px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+}
+
+.container {
+  min-height: 85vh;
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 10px 20px;
+}

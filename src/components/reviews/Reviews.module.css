@@ -1,0 +1,32 @@
+.nothing{
+    font-size: 36px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.14);
+
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px 0px;   
+}
+
+.listItem{  
+
+}
+
+.author{
+ font-size: 24px;
+ color: orange;
+
+}
+
+
+.content{
+    font-size: 18px;
+    color: black;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.14);
+}

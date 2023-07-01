@@ -1,6 +1,7 @@
 import  MovieList  from 'components/movieList/MovieList';
 import { useEffect, useState } from 'react';
 import { fetchTrandingMovies } from 'services/MoviesAPI';
+import css from './HomePage.module.css'
 
 fetchTrandingMovies();
 
@@ -21,7 +22,7 @@ export default function HomePage(){
 
   return (
     <>
-      <h1>Trending films</h1>
+      <h1 className={css.title}>Trending films</h1>
       {movies && <MovieList movies={movies} />}
     </>
   );

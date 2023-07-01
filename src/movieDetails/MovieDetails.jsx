@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import css from './MovieDetails.module.css';
 
 export default function MovieDetails({
   poster_path,
@@ -19,33 +20,29 @@ export default function MovieDetails({
 
   return (
     <>
-      <div>
+      <div className={css.container}>
         <img src={poster} alt={original_title} />
 
-        <div>
-          <h1>
+        <div className={css.topicItem}>
+          <h1 className={css.title}>
             {original_title} ({date})
           </h1>
-          <p>User score: {score}%</p>
-        </div>
+          <p className={css.text}>User score: {score}%</p>
 
-        <div>
-          <h2>Overview</h2>
-          <p>{overview}</p>
-        </div>
+          <h2 className={css.title}>Overview</h2>
+          <p className={css.text}>{overview}</p>
 
-        <div>
-          <h2>Genres</h2>
-          <p>{stringOfGenres}</p>
+          <h2 className={css.title}>Genres</h2>
+          <p className={css.text}>{stringOfGenres}</p>
         </div>
       </div>
 
-      <h2>Additional information</h2>
-      <div>
-        <Link to={'cast'} state={location.state}>
+      <h2 className={css.additional}>Additional information</h2>
+      <div className={css.links}>
+        <Link to={'cast'} state={location.state} className={css.link}>
           Cast
         </Link>
-        <Link to={'reviews'} state={location.state}>
+        <Link to={'reviews'} state={location.state} className={css.link}>
           Reviews
         </Link>
       </div>

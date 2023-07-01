@@ -1,0 +1,8 @@
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.14);
+}

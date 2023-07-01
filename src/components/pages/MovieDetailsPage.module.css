@@ -1,0 +1,21 @@
+.link {
+  position: sticky;
+  top: 18%;
+  left: 80%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid lightgrey;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  width: 70px;
+  border-radius: 10px;
+  margin-bottom: 9px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.link:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
