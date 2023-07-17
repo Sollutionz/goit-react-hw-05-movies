@@ -1,8 +1,8 @@
-import  MovieDetails  from 'movieDetails/MovieDetails';
+import MovieDetails from 'movieDetails/MovieDetails';
 import { Suspense, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMoviesById } from 'services/MoviesAPI';
-import css from './MovieDetailsPage.module.css'
+import css from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
@@ -25,12 +25,16 @@ export default function MovieDetailsPage() {
     <>
       {movie ? (
         <>
-          <Link to={location.state?.from ?? '/'} type="button" className={css.link}>
+          <Link
+            to={location.state?.from ?? '/'}
+            type="button"
+            className={css.link}
+          >
             Go back{' '}
           </Link>
           <MovieDetails {...movie} />
           <Suspense fallback={<h1>Loading...</h1>}>
-              <Outlet />
+            <Outlet />
           </Suspense>
         </>
       ) : (
@@ -38,4 +42,4 @@ export default function MovieDetailsPage() {
       )}
     </>
   );
-};
+}
